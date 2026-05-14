@@ -1,6 +1,11 @@
 {
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mdx"],
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@mdx-js/typescript-plugin"
+      }
+    ],
     "target": "ES2022",
     "jsx": "react-jsx",
     "module": "ESNext",
