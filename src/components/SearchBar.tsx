@@ -16,7 +16,7 @@ export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<
     });
 
     setIndex(idx);
-  }, []);
+  }, [searchIn]);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
