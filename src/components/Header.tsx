@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export default function Header() {
-  return (<header>Header</header>)
+  return (<Link to="/">__root</Link>)
 }

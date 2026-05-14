@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export default function Footer() {
-  return (<div>footer</div>)
+  return <Link to="/">__root</Link>
 }
