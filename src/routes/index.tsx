@@ -1,7 +1,10 @@
+import Posts from '#/components/Posts'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({ component: App })
 
 function App() {
-  return (<div id='app'>Hello, World!</div>)
+  return <div id='app'>Hello, World!
+    <Posts />
+  </div>
 }
