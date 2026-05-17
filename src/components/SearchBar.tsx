@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import FlexSearch from 'flexsearch';
-
+import FlexSearch, {type Index} from 'flexsearch';
 import type { ArticleMetadata } from './PostContainer';
 
-export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<string, ArticleMetadata>, resultCallback: React.Dispatch<React.SetStateAction<any>>}) {
+export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<string, ArticleMetadata>, resultCallback: React.Dispatch<React.SetStateAction<Record<string, ArticleMetadata>>>}) {
   const [query, setQuery] = useState('');
-  const [index, setIndex] = useState<any>(null);
+  const [index, setIndex] = useState<Index | null>(null);
 
   useEffect(() => {
     const idx = new FlexSearch.Index({
