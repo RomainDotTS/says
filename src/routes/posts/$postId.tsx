@@ -29,6 +29,11 @@ export const Route = createFileRoute('/posts/$postId')({
 
 function RouteComponent() {
   const { postId } = Route.useLoaderData()
-  const Content = getArticleModule(postId)!.default
+  const Content = getArticleModule(postId)?.default
+
+  if (!Content) {
+    return notFound()
+  }
+
   return <Content />
 }
