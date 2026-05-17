@@ -31,14 +31,13 @@ export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<
   };
 
   return (
-    <div className='searchbar'>
       <input
         type="text"
         value={query}
         onChange={handleSearch}
         placeholder="Search..."
         style={{ width: '100%', padding: '8px' }}
+        className='searchbar'
       />
-    </div>
   );
 };

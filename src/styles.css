@@ -96,11 +96,13 @@ input {
 }
 
 .searchbar {
-  margin: 10px;
+  margin: 20px 0;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
+  border: 3px solid rgba(255,255,255,0.08);
   color: white;
 }
 
+.searchbar:is(:focus, :hover) {
+  border: 3px solid #969b3c;
+}
