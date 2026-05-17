@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import FlexSearch from 'flexsearch';
+
 import type { ArticleMetadata } from './PostContainer';
 
 export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<string, ArticleMetadata>, resultCallback: React.Dispatch<React.SetStateAction<any>>}) {
