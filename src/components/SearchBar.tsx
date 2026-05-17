@@ -12,7 +12,7 @@ export default function SearchBar({searchIn, resultCallback}: {searchIn: Record<
     });
 
     Object.values(searchIn).forEach(data => {
-      idx.add(data.linkedTo, data.title + ' ' + data.description);
+      idx.add(data.linkedTo, `${data.title} ${data.description}`);
     });
 
     setIndex(idx);
