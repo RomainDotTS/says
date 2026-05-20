@@ -10,7 +10,7 @@ export interface ArticleMetadata {
 export default function PostContainer({title, description, date, linkedTo}: ArticleMetadata) {
     return(
         <article className="article">
-            <Link to="/posts/$postId" params={{ postId: linkedTo }}>
+            <Link to="/posts/$postId" params={{ postId: linkedTo }} viewTransition= {{ types: ["forward"] }}>
                 <h3>{title}</h3>
             </Link>
             <p>{description}</p>

@@ -7,9 +7,8 @@ const metadataArticles: Record<string, ArticleMetadata> = import.meta.glob('../p
 
 export default function Posts() {
   const [filteredArticles, setFilteredArticles] = useState<Record<string, ArticleMetadata>>(metadataArticles);
-  
   return (
-    <div>
+    <div className='content'>
       <SearchBar searchIn={metadataArticles} resultCallback={setFilteredArticles} />
       <div className="flexbox articlesList">
         {Object.values(filteredArticles).map((article) => <PostsContainer key={article.linkedTo} title={article.title} description={article.description} date={article.date} linkedTo={article.linkedTo} />)}

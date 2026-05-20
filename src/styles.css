@@ -6,7 +6,6 @@
 :root {
   --deep-blue: #1d2335;
   --sand: #e7f0e8;
-
 }
 
 * {
@@ -114,4 +113,49 @@ input {
 
 .right {
   margin-left: auto;
+}
+
+.content {
+  view-transition-name: post;
+}
+
+:active-view-transition-type(backward) {
+  &::view-transition-old(post) {
+    animation: 800ms ease move-center-to-right;
+    animation-fill-mode: both;
+  }
+
+  &::view-transition-new(post) {
+    animation: 800ms ease move-left-to-center;
+    animation-fill-mode: both;
+  }
+}
+
+:active-view-transition-type(forward) {
+  &::view-transition-old(post) {
+    animation: 800ms ease move-center-to-left;
+    animation-fill-mode: both;
+  }
+
+  &::view-transition-new(post) {
+    animation: 800ms ease move-right-to-center;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes move-center-to-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100vw); }
+}
+@keyframes move-right-to-center {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(0); }
+}
+@keyframes move-center-to-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100vw); }
+}
+@keyframes move-left-to-center {
+  from { transform: translateX(-100vw); }
+  to { transform: translateX(0); }
 }
